@@ -1,0 +1,15 @@
+service: disputer1
+
+queue:
+  dev: risk-nonprod-ci
+
+steps:
+  - step: bash
+    command:
+      - export ENVIRONMENT=qa
+      - npm install
+      - npm run test
+    flavour: node12
+    properties:
+      env:
+        CONFIG: dev
