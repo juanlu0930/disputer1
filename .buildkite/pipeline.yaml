@@ -1,4 +1,4 @@
-service: disputer1
+service: disputer-api-testing
 
 queue:
   dev: risk-nonprod-ci
