@@ -20,7 +20,7 @@ export function url (){
     if (process.env.ENVIRONMENT === "stg"){
         return testData.stgUrl
     }else if(process.env.ENVIRONMENT === "qa") {
-        return testData.qaUrl
+        return testData.qaUrlDisputer
     }else if(process.env.ENVIRONMENT === 'local'){
         return testData.localUrl
     }else{
