@@ -7,8 +7,6 @@ steps:
   - step: bash
     command:
       - export ENVIRONMENT=stg
-        - export HTTP_USER=afterpay
-        - export HTTP_PASSWORD=$(aws secretsmanager get-secret-value --secret-id "/risk/feature-platform/staging/basic_auth_password" --region ap-southeast-2 --output text --query 'SecretString')
         - npm install
         - npm run test
     flavour: node12

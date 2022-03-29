@@ -1,14 +1,13 @@
 import {
-    axiosOptions, triggerSendEmail, url,
+    axiosOptions, triggerSendEmail,
 } from "./support/library.mjs"
-import {testData} from "./support/config.mjs"
 import { expect } from "chai"
 import { config } from "dotenv"; config()
 
 describe("Trigger to send email Test", function() {
 
     describe ("Get Features by Name should return the correct value",  function() {
-        // this.retries(4)
+        this.retries(4)
         let sendEmail
         // let endPointUrl = url()
 
