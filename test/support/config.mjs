@@ -113,8 +113,7 @@ export const testData =
                 "ping_message": "pong"
         },
         "stgUrl": "https://feature-platform-staging.herokuapp.com",
-        // "qaUrl":  "https://feature-platform-qa.risk.us.platform.afterpay-beta.com",
-        "qaUrl":"https://dispute.risk.us.platform.afterpay-beta.com",
+        "qaUrl":  "https://feature-platform-qa.risk.us.platform.afterpay-beta.com",
         "timeout": 1000,
         "localUrl": "http://localhost:5000",
         "consumerCategory": "CONSUMER",
