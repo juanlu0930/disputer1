@@ -62,6 +62,7 @@ export async function triggerSendEmail(endPointUrl, axiosOptions) {
         let sendEmail = await axios.get(endPointUrl, axiosOptions)
         return sendEmail
     }catch(err){
+        console.log("err: " + err);
         return err
     }
 }
