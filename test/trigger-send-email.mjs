@@ -1,9 +1,9 @@
 import {
     axiosOptions, triggerSendEmail,url
 } from "./support/library.mjs"
+import {testData} from "./support/config.mjs"
 import { expect } from "chai"
 import { config } from "dotenv"; config()
-import {testData} from "./support/config.mjs"
 
 describe("Trigger to send email Test", function() {
 
@@ -14,9 +14,12 @@ describe("Trigger to send email Test", function() {
 
         it("Trigger to send email should return success msg", async function () {
             //Trigger to send email
+            console.log("endPointUrl: " + endPointUrl + ", testData.triggerSendEmail" + testData.triggerSendEmail);
             sendEmail = await triggerSendEmail(endPointUrl + testData.triggerSendEmail,
                 axiosOptions)
+            console.log("sendEmail:" + sendEmail.status + ", sendEmail.data.message: " + sendEmail.data.message);
             expect(sendEmail.status).to.be.equals(200)
+            expect(sendEmail.data.message).to.be.equals("Send add_card emails successfully.")
         })
     })
 })
