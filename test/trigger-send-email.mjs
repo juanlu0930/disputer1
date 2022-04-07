@@ -14,13 +14,13 @@ describe("Trigger to send email Test", function() {
 
         it("Trigger to send email should return success msg", async function () {
             //Trigger to send email
-            console.log("endPointUrl: " + endPointUrl + ", testData.triggerSendEmail" + testData.triggerSendEmail);
+            console.log("<<< LOG >>> endPointUrl: " + endPointUrl + ", testData.triggerSendEmail" + testData.triggerSendEmail);
             sendEmail = await triggerSendEmail(endPointUrl + testData.triggerSendEmail,
                 axiosOptions)
-            // expect(sendEmail.status).to.be.equals(200)
-            console.log("sendEmail:" + sendEmail.status);
-            console.log("sendEmail.data.message: " + sendEmail.data.message);
-            // expect(sendEmail.data.message).to.be.equals("Send add_card emails successfully.")
+            expect(sendEmail.status).to.be.equals(200)
+            console.log("<<< LOG >>> sendEmail:" + sendEmail.status);
+            console.log("<<< LOG >>> sendEmail.data.message: " + sendEmail.data.message);
+            expect(sendEmail.data.message).to.be.equals("Send add_card emails successfully.")
         })
     })
 })
